@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RGB Color Generator</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body class="dark">
+  <div class="container">
+    <h1 id="animatedTitle"></h1>
+    <div class="slider-group">
+      <label>Red: <span id="rVal">0</span></label>
+      <input type="range" id="red" min="0" max="255" />
+    </div>
+    <div class="slider-group">
+      <label>Green: <span id="gVal">0</span></label>
+      <input type="range" id="green" min="0" max="255" />
+    </div>
+    <div class="slider-group">
+      <label>Blue: <span id="bVal">0</span></label>
+      <input type="range" id="blue" min="0" max="255" />
+    </div>
+    <div class="slider-group">
+        <label>Alpha: <span id="aVal">1</span></label>
+        <input type="range" id="alpha" min="0" max="100" value="100" />
+    </div>
+    <div class="color-display" id="colorDisplay">rgb(0, 0, 0)</div>
+    <div class="hex-display" id="hexDisplay">#000000</div>
+    <div class="name-display" id="nameDisplay">Name: N/A</div>
+    <button class="btn" onclick="saveColor()">💾 Save Color</button>
+    <button class="btn" onclick="exportPalette()">📤 Export as Image</button>
+    <button class="btn" id="themeToggle">☀️ Light Mode</button>
+  </div>
+  <div class="container">
+    <h2>🎨 Saved Palette</h2>
+    <div class="palette" id="paletteContainer"></div>
+  </div>
+  <canvas id="paletteCanvas" width="500" height="100"></canvas>
+  <script src="script3.js"></script>
+</body>
+</html>
